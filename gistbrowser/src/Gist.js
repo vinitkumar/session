@@ -47,8 +47,6 @@ class Gist extends Component {
           <pre>Created on {Moment(this.gist.created_at).format('LLL')}</pre>
           <pre>{this.gist.description}</pre>
           { this.state.language &&
-          
-
           <SyntaxHighlighter language={this.state.language} style={docco}>{this.state.fileContent}</SyntaxHighlighter> }
           {!this.state.language && <pre>
               <code lang={this.state.language}>
@@ -56,7 +54,6 @@ class Gist extends Component {
               </code>
             </pre>
           }
-
         </div>
     );
   }

@@ -27,16 +27,24 @@
   to { transform: rotate(360deg); }
 }
 
+.gistList {
+  list-style: none;
+}
+
 .sidebar {
-  float: left;
-  width: 20%;
-  border-right: 1px solid gray;
+  border-right: 1px solid gainsboro;
 }
 
 .main-content {
-  width: 80%;
+  padding: 40px;
 }
 
-.gistList {
-  list-style: none;
+.gist-item a {
+  word-wrap: break-word;
+  font-size: 12px;
+}
+
+.gistResultContainer {
+  padding-left: 40px;
+  padding-right: 40px;
 }

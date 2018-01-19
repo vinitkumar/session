@@ -1,50 +1,46 @@
 import React, { Component } from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
-import GistList from './GistList';
-import Gist from './Gist';
 import logo from './logo.svg';
+import {BrowserRouter as Router, Link} from 'react-router-dom';
+import { Route } from 'react-router-dom';
+import SyntaxHighlighter from 'react-syntax-highlighter';
 import './App.css';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Gist from './Gist';
+import GistList from './GistList';
 
 class App extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
-      gistList: null
+      gistList: null,
     };
   }
 
   componentDidMount() {
-    const _this = this;
-    const apiURl = `https://api.github.com/gists?client_id=6396a71f53863e556b11&&client_secret=098d29751f484f46307027baf674d072ae97050a`;
-    fetch(apiURl).then(function (response){
-      return response.json();
-    }).then(function(json) {
-      _this.setState({gistList: json});
-    })
-    console.log('Hello, I am from the App component');
+      fetch('https://api.github.com/gists?client_id=6396a71f53863e556b11&&client_secret=098d29751f484f46307027baf674d072ae97050a`')
+        .then(res => res.json())
+        .then(gists => {
+          this.setState({gistList: gists})
+        });
   }
 
-
-
   render() {
-    let gists = this.state.gistList;
+    const gists = this.state.gistList;
     return (
       <Router>
-        <div className="App">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h1 className="App-title">Welcome to React</h1>
-          </header>
-          <div className="App-intro">
-            <div className="sidebar">
+        <div className="container-fluid">
+          <h1> Realtime Gist Monitor <img src={logo} className="App-logo" alt="logo" height="50" width="50"/></h1>
+          <div className="row">
+            <div className="col-4 sidebar">
               <GistList gists={this.state.gistList} />
             </div>
-            <div className="main-content">
-              <Route path="/gists/:gistId" render={({match})=> (
+            <div className="col-8 main-content">
+              <Route exact path="/"  render={() => <div>Welcome</div>} />
+              { gists && (
+                <Route path="/gist/:gistId" render={({match})=> (
                   <Gist key={match.params.gistId} gist={gists.find(g=> g.id === match.params.gistId )} />
                 )} />
+              )}
             </div>
           </div>
         </div>
@@ -52,7 +48,5 @@ class App extends Component {
     );
   }
 }
-
-
 
 export default App;
