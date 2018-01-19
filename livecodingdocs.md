@@ -1,6 +1,8 @@
 ## Basics
 
 
+`create-react-app` to create the app
+
 Will use a public API for Github Gist
 
 `
