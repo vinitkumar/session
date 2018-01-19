@@ -1,5 +1,25 @@
 ## New features in ES6
 
+
+### String Literal
+
+Older approach:
+
+```js
+const User = 'Vinit Kumar'
+const newText = 'Hello ' + User;
+console.log(newText);
+```
+
+
+New Approach:
+
+```js
+const User = 'Vinit Kumar'
+const newText = `Hello ${User}`;
+console.log(newText);
+```
+
 ### Classes
 
 ```js
