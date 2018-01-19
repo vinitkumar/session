@@ -7,6 +7,10 @@ Will use a public API for Github Gist
 https://api.github.com/gists?client_id=6396a71f53863e556b11&&client_secret=098d29751f484f46307027baf674d072ae97050a`')
 `
 
+React Router Docs
+
+https://reacttraining.com/react-router/
+
 ```js
 <Route exact path="/"  render={() => <div>Welcome</div>} />
 { gists && (
