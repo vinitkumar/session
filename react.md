@@ -15,7 +15,7 @@ and open source a lot of nice plugins and libraries for it. This means you don't
 plugins when you want to quickly get things done.
 - Excellent project scafolding tools that do a lot of things like structuring the project, building the projects, applying best practises  (like minifyin JS and CSS)
 all done without much effort from the developer( `create-react-app` et.al )
-- React Native ( It compiles your JS, HTML, CSS base app to native code (Obj-C, Swift for iOS and Java for Android) so that you write once and develop cross flatfor apps.
+- React Native ( It compiles your JS, HTML, CSS base app to native code (Obj-C, Swift for iOS and Java for Android) so that you write once and develop cross platform apps.
 
 
 Sites using React:
