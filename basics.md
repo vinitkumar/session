@@ -97,6 +97,8 @@ Mostly can be used to declare things you don't to redeclare or change in the sco
 
 ### Array functions
 
+More detailed docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+
 Arrays comes with a lot of in-built methods which are very useful and result
 in clearer, performant code.
 
