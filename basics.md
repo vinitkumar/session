@@ -97,6 +97,45 @@ Mostly can be used to declare things you don't to redeclare or change in the sco
 
 ### Array functions
 
+Arrays comes with a lot of in-built methods which are very useful and result
+in clearer, performant code.
+
+```js
+var fruits = ['Apple', 'Banana'];
+console.log(fruits.length);
+
+
+### ForEach
+fruits.forEach(function(item, index, array) {
+  console.log(item, index, array);
+});
+
+// array could be optional, just use item & index
+fruits.forEach((item, index, array) => {
+  console.log(item, index, array)
+});
+
+
+fruits.push('Orange');
+fruits.pop();
+
+fruits.indexOf('Apple');
+```
+
+#### Map
+
+```js
+var array1 = [1, 4, 9, 16];
+
+// pass a function to map
+const map1 = array1.map(x => x * 2);
+
+const map2 = array1.map(function (x) { return(x * 2) });
+console.log(map1);
+console.log(map2);
+// expected output: Array [2, 8, 18, 32]
+```
+
 
 ### Arrow functions
 
@@ -153,6 +192,3 @@ fetch(apiURL).then((response) => {
   console.log(json);
 });
 ```
-
-
-
