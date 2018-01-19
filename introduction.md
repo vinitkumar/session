@@ -4,16 +4,16 @@ Vinit, Senior Engineer at Socialschools. Experience in building modern web appli
 
 Tech used:
 
-Django
-Postgres
-Redis
-React
-Node.js
-MongoDB
+- Django
+- Postgres
+- Redis
+- React
+- Node.js
+- MongoDB
 
 
 ### Contact
 
-Github: https://github.com/vinitkumar
-Twitter: https://twitter.com/vinitkme
-Website: https://vinitkumar.me
+- Github: https://github.com/vinitkumar
+- Twitter: https://twitter.com/vinitkme
+- Website: https://vinitkumar.me
